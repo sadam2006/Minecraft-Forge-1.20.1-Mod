@@ -13,6 +13,7 @@ import net.minecraftforge.registries.DeferredRegister;
 import net.minecraftforge.registries.ForgeRegistries;
 import net.minecraftforge.registries.RegistryObject;
 import net.sadam.tutorialmod.TutorialMod;
+import net.sadam.tutorialmod.block.custom.SoundBlock;
 import net.sadam.tutorialmod.item.ModItems;
 
 import java.util.function.Supplier;
@@ -38,6 +39,9 @@ public class ModBlocks {
     public static final RegistryObject<Block> END_STONE_SAPPHIRE_ORE = registerBlock("end_stone_sapphire_ore",
             () -> new DropExperienceBlock(BlockBehaviour.Properties.copy(Blocks.END_STONE)
                     .strength(2f).requiresCorrectToolForDrops(), UniformInt.of(2, 12)));
+
+    public static final RegistryObject<Block> SOUND_BLOCK = registerBlock("sound_block",
+            () -> new SoundBlock(BlockBehaviour.Properties.copy(Blocks.IRON_BLOCK)));
 
     private static <T extends Block> RegistryObject<T> registerBlock(String name, Supplier<T> block) {
         RegistryObject<T> toReturn = BLOCKS.register(name, block);
