@@ -14,6 +14,7 @@ import net.minecraft.world.level.Level;
 import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.Blocks;
 import net.minecraft.world.level.block.state.BlockState;
+import net.sadam.tutorialmod.block.ModBlocks;
 
 import java.util.ArrayList;
 
@@ -24,12 +25,6 @@ public class MetalDetectorItem extends Item {
 
     public MetalDetectorItem(Properties pProperties) {
         super(pProperties);
-        mode.add(Blocks.COAL_ORE);
-        mode.add(Blocks.IRON_ORE);
-        mode.add(Blocks.COPPER_ORE);
-        mode.add(Blocks.GOLD_ORE);
-        mode.add(Blocks.DIAMOND_ORE);
-        mode.add(Blocks.REDSTONE_ORE);
     }
 
     @Override
@@ -37,8 +32,13 @@ public class MetalDetectorItem extends Item {
 
         if(!pLevel.isClientSide) {
 
-            if (currentMode == mode.size() - 1) {
+            if (mode.size() == 0) {
                 currentMode = 0;
+                return InteractionResultHolder.pass(pPlayer.getItemInHand(pUsedHand));
+
+            } else if(currentMode == mode.size() - 1) {
+                currentMode = 0;
+
             } else {
                 currentMode++;
             }
@@ -57,6 +57,27 @@ public class MetalDetectorItem extends Item {
             BlockPos positionClicked = pContext.getClickedPos();
             Player player = pContext.getPlayer();
             boolean foundBlock = false;
+
+
+            if(player.isShiftKeyDown()) {
+                Block block = pContext.getLevel().getBlockState(positionClicked).getBlock();
+
+                if(mode.contains(block)) {
+                    mode.remove(block);
+                    currentMode--;
+
+                    player.sendSystemMessage(Component.literal(I18n.get(block.getDescriptionId()) +
+                            " was removed from the Metal Detector."));
+
+                } else {
+                    mode.add(block);
+                    currentMode = mode.indexOf(block);
+
+                    player.sendSystemMessage(Component.literal(I18n.get(block.getDescriptionId()) +
+                            " was added to the Metal Detector."));
+                }
+                return InteractionResult.SUCCESS;
+            }
 
             for(int i = 0; i <= positionClicked.getY() + 64; i++) {
                 BlockState state = pContext.getLevel().getBlockState(positionClicked.below(i));

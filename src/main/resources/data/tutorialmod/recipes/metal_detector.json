@@ -1,9 +1,14 @@
 {
   "type": "minecraft:crafting_shaped",
   "category": "misc",
+  "pattern": [
+  "SS",
+  "SR",
+  " I"
+],
   "key": {
     "S": {
-      "item:": "tutorialmod:sapphire"
+      "item": "tutorialmod:sapphire"
   },
     "I": {
       "item": "minecraft:iron_ingot"
@@ -12,11 +17,7 @@
       "item": "minecraft:redstone"
     }
   },
-  "pattern": [
-  "SS",
-  "SR",
-  " I"
-],
+
   "result": {
     "item": "tutorialmod:metal_detector"
   }
