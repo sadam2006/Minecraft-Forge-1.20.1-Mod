@@ -1,4 +1,4 @@
-package net.sadam.tutorialmod.item.custom;
+package net.sadam.tutorialmod.item;
 
 import net.minecraft.world.effect.MobEffectInstance;
 import net.minecraft.world.effect.MobEffects;
