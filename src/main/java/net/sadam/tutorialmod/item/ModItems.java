@@ -6,7 +6,6 @@ import net.minecraftforge.registries.DeferredRegister;
 import net.minecraftforge.registries.ForgeRegistries;
 import net.minecraftforge.registries.RegistryObject;
 import net.sadam.tutorialmod.TutorialMod;
-import net.sadam.tutorialmod.item.custom.ChickFilAMenuItem;
 import net.sadam.tutorialmod.item.custom.FuelItem;
 import net.sadam.tutorialmod.item.custom.MetalDetectorItem;
 
@@ -27,10 +26,10 @@ public class ModItems {
             () -> new Item(new Item.Properties().food(ModFoods.STRAWBERRY)));
 
     public static final RegistryObject<Item> CHICK_FIL_A_CHICKEN = ITEMS.register("chick_fil_a_chicken",
-            () -> new Item(new Item.Properties().food(ModFoods.CHICK_FIL_A_CHICKEN)));
+            () -> new Item(new Item.Properties().food(ModFoods.CHICK_FIL_A_CHICKEN).stacksTo(65)));
 
     public static final RegistryObject<Item> CHICK_FIL_A_MENU = ITEMS.register("chick_fil_a_menu",
-            () -> new ChickFilAMenuItem(new Item.Properties()));
+            () -> new Item(new Item.Properties()));
 
     public static final RegistryObject<Item> PINE_CONE = ITEMS.register("pine_cone",
             () -> new FuelItem(new Item.Properties(), 400));
