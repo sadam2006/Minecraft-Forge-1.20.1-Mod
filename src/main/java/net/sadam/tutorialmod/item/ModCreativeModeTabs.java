@@ -24,6 +24,7 @@ public class ModCreativeModeTabs {
 
                         pOutput.accept(ModItems.STRAWBERRY.get());
                         pOutput.accept(ModItems.CHICK_FIL_A_CHICKEN.get());
+                        pOutput.accept(ModItems.CHICK_FIL_A_DELUXE.get());
                         pOutput.accept(ModItems.CHICK_FIL_A_MENU.get());
 
                         pOutput.accept(ModItems.PINE_CONE.get());

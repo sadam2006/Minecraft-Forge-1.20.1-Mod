@@ -26,7 +26,10 @@ public class ModItems {
             () -> new Item(new Item.Properties().food(ModFoods.STRAWBERRY)));
 
     public static final RegistryObject<Item> CHICK_FIL_A_CHICKEN = ITEMS.register("chick_fil_a_chicken",
-            () -> new Item(new Item.Properties().food(ModFoods.CHICK_FIL_A_CHICKEN).stacksTo(65)));
+            () -> new Item(new Item.Properties().food(ModFoods.CHICK_FIL_A_CHICKEN)));
+
+    public static final RegistryObject<Item> CHICK_FIL_A_DELUXE = ITEMS.register("chick_fil_a_deluxe",
+            () -> new Item(new Item.Properties().food(ModFoods.CHICK_FIL_A_DELUXE)));
 
     public static final RegistryObject<Item> CHICK_FIL_A_MENU = ITEMS.register("chick_fil_a_menu",
             () -> new Item(new Item.Properties()));

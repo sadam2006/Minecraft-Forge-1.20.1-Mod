@@ -2,6 +2,7 @@ package net.sadam.tutorialmod.datagen;
 
 import net.minecraft.data.PackOutput;
 import net.minecraft.data.recipes.*;
+import net.minecraft.world.item.Items;
 import net.minecraft.world.item.crafting.AbstractCookingRecipe;
 import net.minecraft.world.item.crafting.Ingredient;
 import net.minecraft.world.item.crafting.RecipeSerializer;
@@ -33,6 +34,16 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
                 .pattern("SSS")
                 .pattern("SSS")
                 .define('S', ModItems.SAPPHIRE.get())
+                .unlockedBy(getHasName(ModItems.SAPPHIRE.get()), has(ModItems.SAPPHIRE.get()))
+                .save(pWriter);
+
+        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ModItems.METAL_DETECTOR.get())
+                .pattern("SS")
+                .pattern("SR")
+                .pattern(" I")
+                .define('S', ModItems.SAPPHIRE.get())
+                .define('R', Items.REDSTONE)
+                .define('I', Items.IRON_INGOT)
                 .unlockedBy(getHasName(ModItems.SAPPHIRE.get()), has(ModItems.SAPPHIRE.get()))
                 .save(pWriter);
 

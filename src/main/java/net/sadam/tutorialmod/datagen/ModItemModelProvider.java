@@ -25,6 +25,7 @@ public class ModItemModelProvider extends ItemModelProvider {
         simpleItem(ModItems.STRAWBERRY);
 
         simpleItem(ModItems.CHICK_FIL_A_CHICKEN);
+        simpleItem(ModItems.CHICK_FIL_A_DELUXE);
         simpleItem(ModItems.CHICK_FIL_A_MENU);
     }
 
