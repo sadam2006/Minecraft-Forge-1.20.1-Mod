@@ -26,6 +26,14 @@ public class ModItemModelProvider extends ItemModelProvider {
 
         simpleItem(ModItems.CHICK_FIL_A_CHICKEN);
         simpleItem(ModItems.CHICK_FIL_A_DELUXE);
+        simpleItem(ModItems.CHICK_FIL_A_SPICY_CHICKEN);
+        simpleItem(ModItems.CHICK_FIL_A_SPICY_DELUXE);
+        simpleItem(ModItems.CHICK_FIL_A_GRILLED_CHICKEN);
+        simpleItem(ModItems.CHICK_FIL_A_GRILLED_CLUB);
+        simpleItem(ModItems.CHICK_FIL_A_GRILLED_CHICKEN_COOL_WRAP);
+        simpleItem(ModItems.CHICK_FIL_A_CHICKEN_NUGGETS);
+        simpleItem(ModItems.CHICK_FIL_A_GRILLED_NUGGETS);
+        simpleItem(ModItems.CHICK_FIL_A_CHICKN_STRIPS);
         simpleItem(ModItems.CHICK_FIL_A_MENU);
     }
 

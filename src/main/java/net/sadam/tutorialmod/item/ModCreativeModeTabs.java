@@ -23,8 +23,17 @@ public class ModCreativeModeTabs {
                         pOutput.accept(ModItems.METAL_DETECTOR.get());
 
                         pOutput.accept(ModItems.STRAWBERRY.get());
+
                         pOutput.accept(ModItems.CHICK_FIL_A_CHICKEN.get());
                         pOutput.accept(ModItems.CHICK_FIL_A_DELUXE.get());
+                        pOutput.accept(ModItems.CHICK_FIL_A_SPICY_CHICKEN.get());
+                        pOutput.accept(ModItems.CHICK_FIL_A_SPICY_DELUXE.get());
+                        pOutput.accept(ModItems.CHICK_FIL_A_GRILLED_CHICKEN.get());
+                        pOutput.accept(ModItems.CHICK_FIL_A_GRILLED_CLUB.get());
+                        pOutput.accept(ModItems.CHICK_FIL_A_GRILLED_CHICKEN_COOL_WRAP.get());
+                        pOutput.accept(ModItems.CHICK_FIL_A_CHICKEN_NUGGETS.get());
+                        pOutput.accept(ModItems.CHICK_FIL_A_GRILLED_NUGGETS.get());
+                        pOutput.accept(ModItems.CHICK_FIL_A_CHICKN_STRIPS.get());
                         pOutput.accept(ModItems.CHICK_FIL_A_MENU.get());
 
                         pOutput.accept(ModItems.PINE_CONE.get());
